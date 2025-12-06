@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { LogIn, UserPlus, Mail, Lock, User } from 'lucide-react';
+import { API_CONFIG } from './config';
 
 interface AuthProps {
   onLogin: (user: any) => void;
 }
 
-const AUTH_URL = 'http://localhost/Caril-Finals/backend/auth.php';
-const GOOGLE_CLIENT_ID = '135384905767-qik0dtcauptqjbusdatmabbcocrodbf7.apps.googleusercontent.com'; // Replace with your actual Client ID
+const AUTH_URL = API_CONFIG.AUTH_URL;
+const GOOGLE_CLIENT_ID = API_CONFIG.GOOGLE_CLIENT_ID;
 
 const styles = {
   container: { minHeight: '100vh', backgroundColor: '#f9fafb', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1rem' },

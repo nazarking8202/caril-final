@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Trash2, Edit, Plus, X, Check, LogOut } from 'lucide-react';
+import { API_CONFIG } from './config';
 
 interface Task {
   id?: number;
@@ -14,7 +15,7 @@ interface TaskManagerProps {
   onLogout: () => void;
 }
 
-const API_URL = 'http://localhost/Caril-Finals/backend/api.php';
+const API_URL = API_CONFIG.API_URL;
 
 const styles = {
   appContainer: { minHeight: '100vh', backgroundColor: '#f9fafb', padding: '2rem' },
